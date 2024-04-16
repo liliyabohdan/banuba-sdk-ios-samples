@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1383E97F2BCE968400660AE3 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383E97E2BCE968400660AE3 /* common.swift */; };
+		1383E9B22BCE9F7C00660AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383E9B12BCE9F7C00660AE3 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,8 @@
 
 /* Begin PBXFileReference section */
 		1383E97B2BCE968400660AE3 /* libcommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1383E97E2BCE968400660AE3 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
+		1383E9B02BCE9F7C00660AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1383E9B12BCE9F7C00660AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +58,8 @@
 		1383E97D2BCE968400660AE3 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				1383E97E2BCE968400660AE3 /* common.swift */,
+				1383E9B12BCE9F7C00660AE3 /* AppDelegate.swift */,
+				1383E9B02BCE9F7C00660AE3 /* Assets.xcassets */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -94,6 +96,7 @@
 				TargetAttributes = {
 					1383E97A2BCE968400660AE3 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -120,7 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E97F2BCE968400660AE3 /* common.swift in Sources */,
+				1383E9B22BCE9F7C00660AE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,11 +252,13 @@
 		1383E9832BCE968400660AE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NEWUB88C7M;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -262,6 +267,7 @@
 		1383E9842BCE968400660AE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NEWUB88C7M;
 				OTHER_LDFLAGS = "-ObjC";

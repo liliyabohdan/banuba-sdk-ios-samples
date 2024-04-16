@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1383E9922BCE98D400660AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383E9912BCE98D400660AE3 /* AppDelegate.swift */; };
 		1383E9962BCE98D400660AE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383E9952BCE98D400660AE3 /* ViewController.swift */; };
 		1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9972BCE98D400660AE3 /* Main.storyboard */; };
-		1383E99B2BCE98D500660AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1383E99A2BCE98D500660AE3 /* Assets.xcassets */; };
-		1383E99E2BCE98D500660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E99C2BCE98D500660AE3 /* LaunchScreen.storyboard */; };
+		1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */; };
+		1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1383E9AF2BCE9F5500660AE3 /* libcommon.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1383E9AE2BCE9F5500660AE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1383E9A52BCE9F5100660AE3 /* common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1383E97B2BCE968400660AE3;
+			remoteInfo = common;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1383E98E2BCE98D400660AE3 /* camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1383E9912BCE98D400660AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1383E9952BCE98D400660AE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1383E9982BCE98D400660AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1383E99A2BCE98D500660AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1383E99D2BCE98D500660AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1383E99F2BCE98D500660AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1383E9A52BCE9F5100660AE3 /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
+		1383E9B62BCE9FFF00660AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../common/common/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +47,10 @@
 		1383E9852BCE98D400660AE3 = {
 			isa = PBXGroup;
 			children = (
+				1383E9A52BCE9F5100660AE3 /* common.xcodeproj */,
 				1383E9902BCE98D400660AE3 /* camera */,
 				1383E98F2BCE98D400660AE3 /* Products */,
+				1383E9B82BCEA02300660AE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,27 @@
 		1383E9902BCE98D400660AE3 /* camera */ = {
 			isa = PBXGroup;
 			children = (
-				1383E9912BCE98D400660AE3 /* AppDelegate.swift */,
 				1383E9952BCE98D400660AE3 /* ViewController.swift */,
+				1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */,
 				1383E9972BCE98D400660AE3 /* Main.storyboard */,
-				1383E99A2BCE98D500660AE3 /* Assets.xcassets */,
-				1383E99C2BCE98D500660AE3 /* LaunchScreen.storyboard */,
 				1383E99F2BCE98D500660AE3 /* Info.plist */,
 			);
 			path = camera;
+			sourceTree = "<group>";
+		};
+		1383E9AB2BCE9F5500660AE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1383E9AF2BCE9F5500660AE3 /* libcommon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1383E9B82BCEA02300660AE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +134,12 @@
 			mainGroup = 1383E9852BCE98D400660AE3;
 			productRefGroup = 1383E98F2BCE98D400660AE3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1383E9AB2BCE9F5500660AE3 /* Products */;
+					ProjectRef = 1383E9A52BCE9F5100660AE3 /* common.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1383E98D2BCE98D400660AE3 /* camera */,
@@ -117,14 +147,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		1383E9AF2BCE9F5500660AE3 /* libcommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcommon.a;
+			remoteRef = 1383E9AE2BCE9F5500660AE3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		1383E98C2BCE98D400660AE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E99E2BCE98D500660AE3 /* LaunchScreen.storyboard in Resources */,
-				1383E99B2BCE98D500660AE3 /* Assets.xcassets in Resources */,
 				1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */,
+				1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1383E9962BCE98D400660AE3 /* ViewController.swift in Sources */,
-				1383E9922BCE98D400660AE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +189,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1383E99C2BCE98D500660AE3 /* LaunchScreen.storyboard */ = {
+		1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1383E99D2BCE98D500660AE3 /* Base */,
+				1383E9B62BCE9FFF00660AE3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -292,7 +330,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = camera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -320,7 +358,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = camera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
