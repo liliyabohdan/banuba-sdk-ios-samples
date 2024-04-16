@@ -11,6 +11,8 @@
 		1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9972BCE98D400660AE3 /* Main.storyboard */; };
 		1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */; };
 		1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1383E9AF2BCE9F5500660AE3 /* libcommon.a */; };
+		1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9C12BCEA5F300660AE3 /* BanubaSdk */; };
+		1383E9C62BCEB91700660AE3 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9C52BCEB91700660AE3 /* effects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,7 @@
 		1383E99F2BCE98D500660AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1383E9A52BCE9F5100660AE3 /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		1383E9B62BCE9FFF00660AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../common/common/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1383E9C52BCEB91700660AE3 /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = effects; path = ../../common/common/effects; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */,
 				1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +69,7 @@
 		1383E9902BCE98D400660AE3 /* camera */ = {
 			isa = PBXGroup;
 			children = (
+				1383E9C52BCEB91700660AE3 /* effects */,
 				1383E9952BCE98D400660AE3 /* ViewController.swift */,
 				1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */,
 				1383E9972BCE98D400660AE3 /* Main.storyboard */,
@@ -104,6 +109,9 @@
 			dependencies = (
 			);
 			name = camera;
+			packageProductDependencies = (
+				1383E9C12BCEA5F300660AE3 /* BanubaSdk */,
+			);
 			productName = camera;
 			productReference = 1383E98E2BCE98D400660AE3 /* camera.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 1383E9852BCE98D400660AE3;
+			packageReferences = (
+				1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+			);
 			productRefGroup = 1383E98F2BCE98D400660AE3 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -162,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1383E9C62BCEB91700660AE3 /* effects in Resources */,
 				1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */,
 				1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -329,6 +341,7 @@
 				DEVELOPMENT_TEAM = NEWUB88C7M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = camera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use Camera to create AR effects";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,6 +370,7 @@
 				DEVELOPMENT_TEAM = NEWUB88C7M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = camera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use Camera to create AR effects";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -397,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1383E9C12BCEA5F300660AE3 /* BanubaSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */;
+			productName = BanubaSdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1383E9862BCE98D400660AE3 /* Project object */;
 }

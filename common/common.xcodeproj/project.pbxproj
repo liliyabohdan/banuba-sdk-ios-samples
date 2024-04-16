@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1383E9B22BCE9F7C00660AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383E9B12BCE9F7C00660AE3 /* AppDelegate.swift */; };
+		1383E9BC2BCEA2BF00660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9BB2BCEA2BF00660AE3 /* BanubaSdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1383E9BC2BCEA2BF00660AE3 /* BanubaSdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +82,9 @@
 			dependencies = (
 			);
 			name = common;
+			packageProductDependencies = (
+				1383E9BB2BCEA2BF00660AE3 /* BanubaSdk */,
+			);
 			productName = common;
 			productReference = 1383E97B2BCE968400660AE3 /* libcommon.a */;
 			productType = "com.apple.product-type.library.static";
@@ -109,6 +114,9 @@
 				Base,
 			);
 			mainGroup = 1383E9722BCE968400660AE3;
+			packageReferences = (
+				1383E9BA2BCEA2BF00660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+			);
 			productRefGroup = 1383E97C2BCE968400660AE3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +308,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1383E9BA2BCEA2BF00660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1383E9BB2BCEA2BF00660AE3 /* BanubaSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1383E9BA2BCEA2BF00660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */;
+			productName = BanubaSdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1383E9732BCE968400660AE3 /* Project object */;
 }
