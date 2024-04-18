@@ -24,11 +24,8 @@ This repository contains the following examples:
 - [`video_processing`](video_processing/) apply effect to video from the gallery,  
 - [`video_recording`](video_recording/) apply effect to video from camera and record video,
 - [`avatar`](avatar/) customizable avatar effect (see comments in code how to change the avatar),
+- [`beauty`](beauty/) basic sample how to aply beauty, this sample can be used for medical application too,
 - [`photo_processing`](photo_processing) apply Makeup effect to photo and use Makeup API in realtime.    
-  
-**Important**  
-The `photo_processing` requires the Makeup effect. You can get the effect on [banuba.com](https://docs.banuba.com/face-ar-sdk-v1/overview/demo_face_filters).
-
 
 ### Docs
 You can find more info [here](https://docs.banuba.com/face-ar-sdk-v1/ios/ios_overview).
