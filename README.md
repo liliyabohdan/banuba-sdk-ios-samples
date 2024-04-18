@@ -23,6 +23,7 @@ This repository contains the following examples:
 - [`photo`](photo/) apply effect to photo from the gallery,  
 - [`video_processing`](video_processing/) apply effect to video from the gallery,  
 - [`video_recording`](video_recording/) apply effect to video from camera and record video,
+- [`avatar`](avatar/) customizable avatar effect (see comments in code how to change the avatar),
 - [`photo_processing`](photo_processing) apply Makeup effect to photo and use Makeup API in realtime.    
   
 **Important**  

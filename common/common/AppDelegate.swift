@@ -12,7 +12,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         BanubaSdkManager.initialize(
-            resourcePath: [Bundle.main.bundlePath + "/effects"],
+            // This is array of paths where to seach for resources. E.g. for effects
+            resourcePath: [
+                Bundle.main.bundlePath + "/effects",
+                Bundle.main.bundlePath // also seacrh dirrectly in app bundle
+            ],
             clientTokenString: banubaClientToken
         )
         return true
