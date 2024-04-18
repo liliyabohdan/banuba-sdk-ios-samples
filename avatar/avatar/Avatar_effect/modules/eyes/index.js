@@ -6,12 +6,12 @@ class EyesShape{
             "shape": "default",
             "color": "default",
             "eyelids": {
-                "type": "default",
-                "color": "default"
+                "type": "none",
+                "color": "none"
             },
             "shadows":  {
-                "type": "default",
-                "color": "default"
+                "type": "none",
+                "color": "none"
             },
         }
         this.shapes = {
@@ -25,54 +25,53 @@ class EyesShape{
         }
     
         this.eyelids_list = {
-            "default": "images/null_alpha.jpg",
-            "eyelids_1": "images/eyelids/eyelid_01_alpha.jpg",
-            "eyelids_2": "images/eyelids/eyelid_02_alpha.jpg",
-            "eyelids_3": "images/eyelids/eyelid_03_alpha.jpg"
+            "none": "images/null_alpha.jpg",
+            "eyelid_01": "images/eyelids/eyelid_01_alpha.jpg",
+            "eyelid_02": "images/eyelids/eyelid_02_alpha.jpg",
+            "eyelid_03": "images/eyelids/eyelid_03_alpha.jpg"
         }
     
         this.shadows_list = {
-            "default": "images/null_alpha.jpg",
-            "eyeshadow_1": "images/Eyeshadow/shadow_01_alpha.jpg",
-            "eyeshadow_2": "images/Eyeshadow/shadow_01_blurry_alpha.jpg",
-            "eyeshadow_3": "images/Eyeshadow/shadow_02_alpha.jpg",
-            "eyeshadow_4": "images/Eyeshadow/shadow_02_blurry_alpha.jpg",
-            "eyeshadow_5": "images/Eyeshadow/shadow_03_alpha.jpg",
-            "eyeshadow_6": "images/Eyeshadow/shadow_03_blurry_alpha.jpg",
-            "eyeshadow_7": "images/Eyeshadow/shadow_04_alpha.jpg",
-            "eyeshadow_8": "images/Eyeshadow/shadow_04_blurry_alpha.jpg"
+            "none": "images/null_alpha.jpg",
+            "eyeshadow_01": "images/Eyeshadow/shadow_01_alpha.jpg",
+            "eyeshadow_02": "images/Eyeshadow/shadow_01_blurry_alpha.jpg",
+            "eyeshadow_03": "images/Eyeshadow/shadow_02_alpha.jpg",
+            "eyeshadow_04": "images/Eyeshadow/shadow_02_blurry_alpha.jpg",
+            "eyeshadow_05": "images/Eyeshadow/shadow_03_alpha.jpg",
+            "eyeshadow_06": "images/Eyeshadow/shadow_03_blurry_alpha.jpg",
+            "eyeshadow_07": "images/Eyeshadow/shadow_04_alpha.jpg",
+            "eyeshadow_08": "images/Eyeshadow/shadow_04_blurry_alpha.jpg"
         }
     
         this.eyelids_colors = {
-            "default": "0., 0., 0., 0.",
-            "color_eyelids": ".66, 0.53, 0.48, .8"
+            "none": "0., 0., 0., 0."
         }
     
         this.shadows_colors = {
-            "default": "0., 0., 0., 0.",
-            "color_1": "0.9764705882352941, 0.9764705882352941, 0.9764705882352941, 0.7",
-            "color_2": "0.8352941176470589, 0.8352941176470589, 0.8352941176470589, 0.7",
-            "color_3": "0.3215686274509804, 0.3215686274509804, 0.3215686274509804, 0.7",
-            "color_4": "0.06274509803921569, 0.06274509803921569, 0.06274509803921569, 0.7",
-            "color_5": "0.8509803921568627, 0.788235294117647, 0.7686274509803922,0.7",
-            "color_6": "0.7647058823529411, 0.6274509803921569, 0.5843137254901961, 0.7",
-            "color_7": "0.6352941176470588, 0.47058823529411764, 0.4235294117647059,0.7",
-            "color_8": "0.4980392156862745, 0.30196078431372547, 0.24313725490196078,0.7",
-            "color_9": "0.9294117647058824, 0.7529411764705882, 0.7647058823529411,0.7",
-            "color_10": "0.8196078431372549, 0.5176470588235295, 0.5333333333333333,0.7",
-            "color_11": "0.5803921568627451, 0.3686274509803922, 0.3764705882352941,0.7",
-            "color_12": "0.35294117647058826, 0.0392156862745098, 0.0392156862745098,0.7",
-            "color_13": "0.7725490196078432, 0.1411764705882353, 0.09411764705882353,0.7",
-            "color_14": "0.7686274509803922, 0.1843137254901961, 0.4588235294117647,0.7",
-            "color_15": "0.5607843137254902, 0.2196078431372549, 0.5764705882352941,0.7",
-            "color_16": "0.4588235294117647, 0.3607843137254902, 0.6784313725490196,0.7",
-            "color_17": "0.27450980392156865, 0.3607843137254902, 0.7529411764705882,0.7",
-            "color_18": "0.19215686274509805, 0.47058823529411764, 0.8117647058823529,0.7",
-            "color_19": "0.28627450980392155, 0.6352941176470588, 0.6352941176470588,0.7",
-            "color_20": "0.3803921568627451, 0.5764705882352941, 0.1568627450980392,0.7",
-            "color_21": "0.6627450980392157, 0.6431372549019608, 0.19215686274509805,0.7",
-            "color_22": "0.9450980392156862, 0.6392156862745098, 0.22745098039215686,0.7",
-            "color_23": "0.8588235294117647, 0.38823529411764707, 0.1607843137254902,0.7",
+            "none": "0., 0., 0., 0.",
+            "color_1": "0.9764705882352941, 0.9764705882352941, 0.9764705882352941, 1.",
+            "color_2": "0.8352941176470589, 0.8352941176470589, 0.8352941176470589, 1.",
+            "color_3": "0.3215686274509804, 0.3215686274509804, 0.3215686274509804, 1.",
+            "color_4": "0.06274509803921569, 0.06274509803921569, 0.06274509803921569, 1.",
+            "color_5": "0.8509803921568627, 0.788235294117647, 0.7686274509803922,1.",
+            "color_6": "0.7647058823529411, 0.6274509803921569, 0.5843137254901961, 1.",
+            "color_7": "0.6352941176470588, 0.47058823529411764, 0.4235294117647059,1.",
+            "color_8": "0.4980392156862745, 0.30196078431372547, 0.24313725490196078,1.",
+            "color_9": "0.9294117647058824, 0.7529411764705882, 0.7647058823529411,1.",
+            "color_10": "0.8196078431372549, 0.5176470588235295, 0.5333333333333333,1.",
+            "color_11": "0.5803921568627451, 0.3686274509803922, 0.3764705882352941,1.",
+            "color_12": "0.35294117647058826, 0.0392156862745098, 0.0392156862745098,1.",
+            "color_13": "0.7725490196078432, 0.1411764705882353, 0.09411764705882353,1.",
+            "color_14": "0.7686274509803922, 0.1843137254901961, 0.4588235294117647,1.",
+            "color_15": "0.5607843137254902, 0.2196078431372549, 0.5764705882352941,1.",
+            "color_16": "0.4588235294117647, 0.3607843137254902, 0.6784313725490196,1.",
+            "color_17": "0.27450980392156865, 0.3607843137254902, 0.7529411764705882,1.",
+            "color_18": "0.19215686274509805, 0.47058823529411764, 0.8117647058823529,1.",
+            "color_19": "0.28627450980392155, 0.6352941176470588, 0.6352941176470588,1.",
+            "color_20": "0.3803921568627451, 0.5764705882352941, 0.1568627450980392,1.",
+            "color_21": "0.6627450980392157, 0.6431372549019608, 0.19215686274509805,1.",
+            "color_22": "0.9450980392156862, 0.6392156862745098, 0.22745098039215686,1.",
+            "color_23": "0.8588235294117647, 0.38823529411764707, 0.1607843137254902,1.",
         }
     
         this.eyes_colors = {
@@ -129,7 +128,7 @@ class EyesShape{
                     let path = params.type.substring(1);
                     this.eyelids_texture.load(path)
                 }else{
-                    this.eyelids_list[params.type] && this.eyelids_texture.load(this.eyelids_list[params.type])
+                    this.eyelids_texture.load(this.eyelids_list[params.type])
                 }
             }
             if(params.color){
@@ -137,7 +136,7 @@ class EyesShape{
                 if(params.color.charAt(0) == "@"){
                     c = params.color.substring(1);
                 } else {
-                    c = this.eyelids_colors[params.color] || this.eyelids_colors["default"];
+                    c = this.eyelids_colors[params.color] || this.eyelids_colors["none"];
                 }
                 const [x,y,z, w] = c.split(',')
                 this.eyelids_color.setVector4(new bnb.Vec4(x,y,z,w));
@@ -152,7 +151,7 @@ class EyesShape{
                     let path = params.type.substring(1);
                     this.shadows.load(path)
                 }else{
-                    this.shadows_list[params.type] && this.shadows.load(this.shadows_list[params.type])
+                    this.shadows.load(this.shadows_list[params.type])
                 }
             }
             if(params.color){
@@ -160,7 +159,7 @@ class EyesShape{
                 if(params.color.charAt(0) == "@"){
                     c = params.color.substring(1);
                 } else {
-                    c = this.shadows_colors[params.color] || this.shadows_colors["default"];
+                    c = this.shadows_colors[params.color] || this.shadows_colors["none"];
                 }
                 const [x,y,z, w] = c.split(',')
                 this.shadows_color.setVector4(new bnb.Vec4(x,y,z,w));

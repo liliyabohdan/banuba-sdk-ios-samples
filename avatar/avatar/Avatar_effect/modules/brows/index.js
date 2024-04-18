@@ -78,7 +78,7 @@ class Brows{
     }
 
     setShapePreset(name){
-        this.shapes[name] && this.setShape(this.shapes[name])
+        this.setShape(this.shapes[name])
     }
     
     parameters({shape, color}){

@@ -29,10 +29,11 @@ class ViewController: UIViewController {
         
         // Load avatar effect from app bundle. It will use the config provided
         // in `setState` call from here
-        // https://github.com/Banuba/banuba-sdk-ios-samples/blob/master/avatar/avatar/Avatar_effect/config.js#L95
+        // https://github.com/Banuba/banuba-sdk-ios-samples/blob/master/avatar/avatar/Avatar_effect/config.js#L97
         // you may modify it right there or during runtime (see below).
         // Available option are documented here
         // https://github.com/Banuba/banuba-sdk-ios-samples/blob/master/avatar/avatar/Avatar_effect/Readme.md
+        // In order to remove hint, add call to `delTap()` at the end of `config.js`
         effect = player?.load(effect: "Avatar_effect")
         
         // Chnage hair style in runtime

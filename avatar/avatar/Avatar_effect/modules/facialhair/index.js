@@ -10,28 +10,12 @@ class Facialhair{
             "default" : {
                 "name": "default"
             },
-            "shape_1": {
+            "first": {
                 "name": "facial_hair_01",
                 "type": "texture"
             },
-            "shape_2" : {
+            "second" : {
                 "name": "mustache_02",
-                "type": "mesh"
-            },
-            "shape_3" : {
-                "name": "mustache_03",
-                "type": "mesh"
-            },
-            "shape_4" : {
-                "name": "mustache_04",
-                "type": "mesh"
-            },
-            "shape_5" : {
-                "name": "mustache_05",
-                "type": "mesh"
-            },
-            "shape_6" : {
-                "name": "mustache_06",
                 "type": "mesh"
             }
         }
@@ -78,14 +62,12 @@ class Facialhair{
         }
 
         this.material_facial = am.findMaterial("mat_mustache_01");
-        this.mesh = am.findMesh("mustache_02");
 
         this.MI = bnb.scene.getRoot().findChildByName("Mustache").getComponent(bnb.ComponentType.MESH_INSTANCE).asMeshInstance()
         this.Base = am.findImage("mustache_Base").asTexture();
         this.MR = am.findImage("mustache_MR").asTexture();
         this.Normal = am.findImage("mustache_Normal").asTexture();
         this.facialhair_color = am.findMaterial("unused").findParameter("facialhair_color");
-        this.Blendshapes = am.findImage("mustache_blendshapes").asTexture();
 
         this.facial_tex = am.findImage("facial").asTexture();
 
@@ -96,26 +78,19 @@ class Facialhair{
         if(shape == "default"){
             return
         }
-        if(this.shapes[shape]){
-            if(this.shapes[shape].type == "texture"){
-                this.facial_tex.load("modules/facialhair/images/"+this.shapes[shape].name+".png")
-                return;
-            }
-
-            // am.uploadMeshData(this.mesh, "meshes/"+this.shapes[name]+".bsm2")
-            // const Mesh = am.findMesh(this.shapes[shape].name)
-            // this.MI.setMesh(Mesh)
-            am.uploadMeshData(this.mesh, "meshes/"+this.shapes[shape].name+".bsm2")
-
-            this.MI.setSubGeometryMaterial("mat_mustache_01", this.material_facial)
-            this.Base.load("modules/facialhair/images/"+this.shapes[shape].name+"_Base.png")
-            this.MR.load("modules/facialhair/images/"+this.shapes[shape].name+"_MR.png")
-            this.Normal.load("modules/facialhair/images/"+this.shapes[shape].name+"_Normal.png")
-            this.Blendshapes.load("modules/facialhair/images/blendshapes_"+ this.shapes[shape].name +".ktx")
-
-            this.MI.setVisible(true)
+        bnb.log(shape)
+        if(this.shapes[shape].type == "texture"){
+            this.facial_tex.load("modules/facialhair/images/"+this.shapes[shape].name+".png")
+            return;
         }
-
+        // am.uploadMeshData(this.mesh, "meshes/"+this.shapes[name]+".bsm2")
+        const Mesh = am.findMesh(this.shapes[shape].name)
+        this.MI.setMesh(Mesh)
+        this.MI.setSubGeometryMaterial("mat_mustache_01", this.material_facial)
+        this.Base.load("modules/facialhair/images/"+this.shapes[shape].name+"_Base.png")
+        this.MR.load("modules/facialhair/images/"+this.shapes[shape].name+"_MR.png")
+        this.Normal.load("modules/facialhair/images/"+this.shapes[shape].name+"_Normal.png")
+        this.MI.setVisible(true)
     }
 
     setColor(color){

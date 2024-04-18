@@ -115,7 +115,7 @@ void main()
 
 	base = blendMultiply(base, g2l(shadows_color.rgb), shadows.r * shadows_color.a);
 	base = blendMultiply(base, g2l(eyelids_color.rgb), eyelids.r * eyelids_color.a);
-	base = blendMultiply(base, g2l(vec3(0.66, 0.53, 0.48)), base_opacity.r * 0.7);
+	base = blendMultiply(base, vec3(0.), base_opacity.r);
 
 	float opacity = 1.;
 

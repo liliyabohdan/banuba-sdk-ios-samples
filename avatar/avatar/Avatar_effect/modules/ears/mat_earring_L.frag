@@ -15,10 +15,9 @@ BNB_IN(3) vec3 var_n;
 BNB_IN(4) vec3 var_v;
 
 BNB_DECLARE_SAMPLER_2D(0, 1, base_color);
-BNB_DECLARE_SAMPLER_2D(2, 3, metallic_roughness);
-BNB_DECLARE_SAMPLER_2D(4, 5, normal);
-BNB_DECLARE_SAMPLER_CUBE(6, 7, tex_ibl_diff);
-BNB_DECLARE_SAMPLER_CUBE(8, 9, tex_ibl_spec);
+BNB_DECLARE_SAMPLER_2D(2, 3, normal);
+BNB_DECLARE_SAMPLER_CUBE(4, 5, tex_ibl_diff);
+BNB_DECLARE_SAMPLER_CUBE(6, 7, tex_ibl_spec);
 
 // gamma to linear
 vec3 g2l( vec3 g )
@@ -126,10 +125,8 @@ void main()
 	float opacity = base_opacity.w;
 
 
-	vec3 mrao = BNB_TEXTURE_2D(BNB_SAMPLER_2D(metallic_roughness),var_uv).xyz;
-
-	float metallic = mrao.z;
-	float roughness = mrao.y;
+	float metallic = 1.;
+	float roughness = 0.25;
 
 	vec3 N = normalize( mat3(var_t,var_b,var_n)*(BNB_TEXTURE_2D(BNB_SAMPLER_2D(normal),var_uv).xyz*2.-1.) );
 

@@ -25,9 +25,9 @@ BNB_LAYOUT_LOCATION(5) BNB_IN vec4 attrib_weights;
 BNB_LAYOUT_LOCATION(6) BNB_IN uint attrib_vertex_id;
 #endif
 
-BNB_DECLARE_SAMPLER_2D(10, 11, bnb_BONES);
+BNB_DECLARE_SAMPLER_2D(8, 9, bnb_BONES);
 
-BNB_DECLARE_SAMPLER_2D_ARRAY(12, 13, tex_blend_shapes);
+BNB_DECLARE_SAMPLER_2D_ARRAY(10, 11, tex_blend_shapes);
 
 BNB_OUT(0) vec2 var_uv;
 BNB_OUT(1) vec3 var_t;

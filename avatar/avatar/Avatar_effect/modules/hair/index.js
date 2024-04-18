@@ -50,27 +50,21 @@ class Hair{
 
         this.shapes = {
             "default" : "",
-            "shape_1" : "hair_01",
-            "shape_2" : "hair_02",
-            "shape_3" : "hair_03",
-            "shape_4" : "hair_04",
-            "shape_5" : "hair_05",
-            "shape_6" : "hair_06",
-            "shape_7" : "hair_07",
-            "shape_8" : "hair_08",
-            "shape_9" : "hair_09",
-            "shape_10" : "hair_10",
-            "shape_11" : "hair_11",
-            "shape_12" : "hair_12",
-            "shape_13" : "hair_13",
-            "shape_14" : "hair_14",
-            "shape_15" : "hair_15",
-            "shape_16" : "hair_16",
-            "shape_17" : "hair_17",
-            "shape_18" : "hair_18",
-
+            "first" : "hair_01",
+            "second" : "hair_02",
+            "third" : "hair_03",
+            "fourth" : "hair_04",
+            "fifth" : "hair_05",
+            "sixth" : "hair_06",
+            "seventh" : "hair_07",
+            "eighth" : "hair_08",
+            "ninth" : "hair_09",
+            "tenth" : "hair_10",
+            "eleventh" : "hair_11",
+            "twelfth" : "hair_12",
+            "thirteenth" : "hair_13",
         }
-        this.mesh = am.findMesh("hair_01");
+        this.mesh = am.findMesh("hair");
         this.material = am.findMaterial("mat_hair_01");
 
         this.MI = bnb.scene.getRoot().findChildByName("Hair").getComponent(bnb.ComponentType.MESH_INSTANCE).asMeshInstance()
@@ -91,20 +85,16 @@ class Hair{
         if(name == "default"){
             return
         }
+        // am.uploadMeshData(this.mesh, "meshes/"+this.shapes[name]+".bsm2")
+        const Mesh = am.findMesh(this.shapes[name])
+        this.MI.setMesh(Mesh)
 
-        if(this.shapes[name]){
-            // am.uploadMeshData(this.mesh, "meshes/"+this.shapes[name]+".bsm2")
-            // const Mesh = am.findMesh(this.shapes[name])
-            // this.MI.setMesh(Mesh)
-            am.uploadMeshData(this.mesh, "meshes/"+this.shapes[name]+".bsm2")
-            this.MI.setSubGeometryMaterial("mat_hair_01", this.material)
-            this.Base.load("modules/hair/images/"+this.shapes[name]+"_Base.jpg")
-            this.MR.load("modules/hair/images/"+this.shapes[name]+"_MR.jpg")
-            this.Normal.load("modules/hair/images/"+this.shapes[name]+"_Normal.jpg")
-            this.Blendshapes.load("modules/hair/images/blendshapes_"+ this.shapes[name] +".ktx")
-            this.MI.setVisible(true)
-        }
-
+        this.MI.setSubGeometryMaterial("mat_hair_01", this.material)
+        this.Base.load("modules/hair/images/"+this.shapes[name]+"_Base.jpg")
+        this.MR.load("modules/hair/images/"+this.shapes[name]+"_MR.jpg")
+        this.Normal.load("modules/hair/images/"+this.shapes[name]+"_Normal.jpg")
+        this.Blendshapes.load("modules/hair/images/blendshapes_"+ this.shapes[name] +".ktx")
+        this.MI.setVisible(true)
     }
 
     parameters({shape,color}){

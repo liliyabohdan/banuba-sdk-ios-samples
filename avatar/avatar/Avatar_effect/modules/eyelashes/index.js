@@ -19,19 +19,19 @@ class Eyelashes{
                 this.Eyelashes_03.setVisible(false)
                 this.Eyelashes_04.setVisible(false)
                 break;
-            case "shape_1":
+            case "first":
                 this.Eyelashes_01.setVisible(true)
                 break;
-            case "shape_2":
+            case "second":
                 this.Eyelashes_01.setVisible(true)
                 this.Eyelashes_02.setVisible(true)
                 break;
-            case "shape_3":
+            case "third":
                 this.Eyelashes_01.setVisible(true)
                 this.Eyelashes_02.setVisible(true)
                 this.Eyelashes_03.setVisible(true)
                 break;
-            case "shape_4":
+            case "fourth":
                 this.Eyelashes_01.setVisible(true)
                 this.Eyelashes_02.setVisible(true)
                 this.Eyelashes_03.setVisible(true)

@@ -94,11 +94,7 @@ void main()
             bs_w = face_shape_hpro.z; // ShapeFaceRectangular
         if(i == 7)
             bs_w = face_shape_hpro.w; // ShapeFaceOblong
-        if(i == 8)
-            bs_w = ears_shape_sv_sh_pv.x; // ShapeEarSizeVertical
-        if(i == 9)
-            bs_w = ears_shape_sv_sh_pv.z; // ShapeEarPositionVertical
-            
+        
         if( bs_w != 0. )
         {
             vec3 bs_p_delta = texelFetch(BNB_SAMPLER_2D_ARRAY(tex_blend_shapes), ivec3(bs_p_uv,i), 0 ).xyz*bs_w;

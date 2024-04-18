@@ -1,5 +1,8 @@
-bnb.scene.enableRecognizerFeature(bnb.FeatureID.ACTION_UNITS_ANTIJITTER);
+// bnb.scene.enableRecognizerFeature(bnb.FeatureID.ACTION_UNITS_ANTIJITTER);
+const states = JSON.parse(require("./states.js"))
 require("bnb_js/timers")
+
+
 const am = bnb.scene.getAssetManager();
 const hair_module = require("./modules/hair/index.js")
 const body_module = require("./modules/body/index.js")
@@ -42,12 +45,9 @@ function clear() {
 }
 
 function setState(state) {
-    let time = new Date().getTime();
     clear()
     if (state)
         for (const [region, settings] of Object.entries(state)) AvatarRegions[region].parameters(settings)
-    let time2 = new Date().getTime();
-    bnb.log("Change time: "+(time2 - time))
 }
 
 let isScreenshot = false
@@ -65,6 +65,7 @@ function screenshot(check) {
 const rot = am.findMaterial("unused").findParameter("face_rotation");
 const face = bnb.scene.getRoot().findChildByName("face_tracker0").getComponent(bnb.ComponentType.FACE_TRACKER).asFaceTracker()
 
+
 let anim = 0;
 let isFaceAnim = false;
 bnb.eventListener.on("onUpdate", function (args) {
@@ -75,7 +76,8 @@ bnb.eventListener.on("onUpdate", function (args) {
         if (face.hasFace() && (!isFaceAnim || (anim < 1. && anim > 0))) {
             anim -= speedReturn;
             anim = anim >= 0 ? anim : 0;
-
+    
+            bnb.log(transl)
             am.findMaterial("unused").findParameter("is_face_anim").setVector4(new bnb.Vec4(1., anim, 0., 0.));
             if(anim == 0)
                 isFaceAnim = true;
@@ -94,34 +96,34 @@ bnb.eventListener.on("onUpdate", function (args) {
 
 setState({
     "Face": {
-        "shape": "shape_1",
+        "shape": "shape_01",
         "makeups": {
             "wrinkles": {
-                "type": "default",
-                "color": "default"
+                "type": "none",
+                "color": "none"
             },
             "freckles": {
-                "type": "default",
-                "color": "default"
+                "type": "none",
+                "color": "none"
             },
             "moles": {
-                "type": "default",
-                "color": "default"
+                "type": "none",
+                "color": "none"
             },
             "blush": {
-                "type": "default",
-                "color": "default"
+                "type": "none",
+                "color": "none"
             },
         },
         "lips": {
             "color": "default",
             "type": "matte"
         },
-        "color": "default",
+        "color": "white",
         "gender": "male"
     },
     "FacialHair":{
-        "shape": "default",
+        "shape":"default",
         "color": "default",
     },
     "Mouth": {
@@ -133,11 +135,11 @@ setState({
     "Ears": {
         "shape": "default",
         "left_earring":{
-            "shape": "default",
+            "shape": "none",
             "color": "default"
         },
         "right_earring":{
-            "shape": "default",
+            "shape": "none",
             "color": "default" 
         }
     },
@@ -145,12 +147,12 @@ setState({
         "shape": "default",
         "color": "default",
         "eyelids": {
-            "type": "default",
-            "color": "default"
+            "type": "none",
+            "color": "none"
         },
         "shadows":  {
-            "type": "default",
-            "color": "default"
+            "type": "none",
+            "color": "none"
         },
     },
     "Eyelashes": {
@@ -179,3 +181,43 @@ setState({
         "set": "default"
     },
 })
+
+const keys = Object.keys(states)
+const last_index = keys.length - 1;
+let i = 0;
+
+function autotest(interval){
+    setInterval(()=>{
+        setState(states[keys[i]])
+        bnb.log("STATE: " + keys[i])
+        i++;
+        if(i > last_index)
+            i = 0;
+    }, interval)
+}
+
+function test(name){
+    setState(states[name])
+}
+
+function delTap(){
+    bnb.scene.getRoot().findChildByName("plane").getComponent(bnb.ComponentType.MESH_INSTANCE).asMeshInstance().setVisible(false)
+    am.findImage("tap").asVideo().asMedia().stop();
+}
+
+setTimeout(()=>{
+    delTap()
+}, 3000)
+
+
+//test("m01")
+// autotest(5000)
+
+bnb.eventListener.on("onTouchesBegan", (touches) => {
+    setState(states[keys[i]])
+    delTap()
+    bnb.log("STATE: " + keys[i])
+    i++;
+    if(i > last_index)
+        i = 0;
+});

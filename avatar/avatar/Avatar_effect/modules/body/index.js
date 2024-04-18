@@ -6,24 +6,24 @@ class Face {
             "shape": "shape_01",
             "makeups": {
                 "wrinkles": {
-                    "type": "default",
-                    "color": "default"
+                    "type": "none",
+                    "color": "none"
                 },
                 "freckles":  {
-                    "type": "default",
-                    "color": "default"
+                    "type": "none",
+                    "color": "none"
                 },
                 "moles":  {
-                    "type": "default",
-                    "color": "default"
+                    "type": "none",
+                    "color": "none"
                 },
                 "blush":  {
-                    "type": "default",
-                    "color": "default"
+                    "type": "none",
+                    "color": "none"
                 },
                 "shadows":  {
-                    "type": "default",
-                    "color": "default"
+                    "type": "none",
+                    "color": "none"
                 },
             },
             "color": "white",
@@ -35,7 +35,7 @@ class Face {
         }
     
         this.shapes = {
-            "shape_1":{
+            "shape_01":{
                 "round": 0.0,
                 "square": 0.0,
                 "triangle": 0.0,
@@ -45,44 +45,43 @@ class Face {
                 "rectangular": 0.0,
                 "oblong": 0.0,
             },
-            "shape_2":{
-                "round": 0.3,
-                "oblong": 0.3,
+            "shape_02":{
+                "round": 0.8,
             },
-            "shape_3":{
-                "round": -0.2,
+            "shape_03":{
+                "round": 0.2,
                 "triangle": 0.4,
-                "diamond": 0.35,
+                "diamond": 0.85,
                 "pear": 0.3,
                 "oblong": 0.35,
             },
-            "shape_4":{
+            "shape_04":{
                 "round": 0.5, 
                 "triangle": 0.3, 
                 "heart": 0.8, 
                 "oblong": 0.2
             },
-            "shape_5":{
+            "shape_05":{
                 "round": -0.2, 
                 "square": -0.1, 
                 "pear": 0.1, 
                 "oblong": 0.5
             },
-            "shape_6":{
+            "shape_06":{
                 "triangle": -0.5, 
                 "pear": 0.9, 
                 "rectangular": 0.2
             },
-            "shape_7":{
+            "shape_07":{
                 "square": 0.1, 
                 "rectangular": 0.8, 
                 "oblong": -0.8
             },
-            "shape_8":{
+            "shape_08":{
                 "square": 0.8, 
                 "oblong": -0.4
             },
-            "shape_9":{
+            "shape_09":{
                 "triangle": 0.7, 
                 "diamond": 0.2, 
                 "rectangular": -0.2
@@ -154,66 +153,74 @@ class Face {
             "color_40": "0.34509803921568627, 0.21568627450980393, 0.1450980392156863",
             "color_41": "0.2784313725490196, 0.16470588235294117, 0.10196078431372549",
             "color_42": "0.20784313725490197, 0.10980392156862745, 0.058823529411764705",
+
         }
     
         this.images = {
+            "male": {
+                "base": "modules/body/male_head_BaseColor.jpg",
+                "overlay": "modules/body/male_head_overlay.jpg"
+            },
+            "female": {
+                "base": "modules/body/female_head_BaseColor.jpg",
+                "overlay": "modules/body/female_head_overlay.jpg"
+            },
             "lips":{
-                "default": "images/null_image.png",
+                "none": "images/null_image.png",
                 "glitter": "images/null_image.png",
             },
             "makeup":{
                 "wrinkles":{
-                    "default": "images/null_alpha.jpg",
-                    "wrinkles_1": "images/wrinkles/mat_wrinkles_01_alpha.jpg",
-                    "wrinkles_2": "images/wrinkles/mat_wrinkles_02_alpha.jpg",
-                    "wrinkles_3": "images/wrinkles/mat_wrinkles_03_alpha.jpg"
+                    "none": "images/null_alpha.jpg",
+                    "wrinkles_01": "images/wrinkles/mat_wrinkles_01_alpha.jpg",
+                    "wrinkles_02": "images/wrinkles/mat_wrinkles_02_alpha.jpg",
+                    "wrinkles_03": "images/wrinkles/mat_wrinkles_03_alpha.jpg"
                 },
                 "freckles":{
-                    "default": "images/null_alpha.jpg",
-                    "freckles_1": "images/freckles/mat_freckles_01_alpha.jpg",
-                    "freckles_2": "images/freckles/mat_freckles_02_alpha.jpg",
-                    "freckles_3": "images/freckles/mat_freckles_03_alpha.jpg",
+                    "none": "images/null_alpha.jpg",
+                    "freckles_01": "images/freckles/mat_freckles_01_alpha.jpg",
+                    "freckles_02": "images/freckles/mat_freckles_02_alpha.jpg",
+                    "freckles_03": "images/freckles/mat_freckles_03_alpha.jpg",
                 },
                 "moles":{
-                    "default": "images/null_alpha.jpg",
-                    "moles_1": "images/moles/mat_moles_01_alpha.jpg",
-                    "moles_2": "images/moles/mat_moles_02_alpha.jpg",
-                    "moles_3": "images/moles/mat_moles_03_alpha.jpg"
+                    "none": "images/null_alpha.jpg",
+                    "moles_01": "images/moles/mat_moles_01_alpha.jpg",
+                    "moles_02": "images/moles/mat_moles_02_alpha.jpg",
+                    "moles_03": "images/moles/mat_moles_03_alpha.jpg"
                 },
                 "blush":{
-                    "default": "images/null_alpha.jpg",
-                    "blush_1": "images/blush/mat_blush_01_alpha.jpg",
-                    "blush_2": "images/blush/mat_blush_02_alpha.jpg",
-                    "blush_3": "images/blush/mat_blush_03_alpha.jpg",
-                    "blush_4": "images/blush/mat_blush_04_alpha.jpg"
+                    "none": "images/null_alpha.jpg",
+                    "blush_01": "images/blush/mat_blush_01_alpha.jpg",
+                    "blush_02": "images/blush/mat_blush_01_alpha.jpg",
+                    "blush_03": "images/blush/mat_blush_01_alpha.jpg",
+                    "blush_04": "images/blush/mat_blush_01_alpha.jpg"
                 }
             }
         }
     
         this.makeup_colors = {
-            "default": "0., 0., 0., 0.",
-            "color_freckles": "0.9608, 0.7176, 0.5725, 1.2",
-            "color_moles": "0.4196,0.2863,0.2431, 1.0",
-            "color_blush": "0.95, 0.62, 0.56, 1.0",
-            "color_wrinkles": ".66, 0.53, 0.48, .8"
-
+            "none": "0., 0., 0., 0.",
+            "color_freckles": "0.84, 0.53, 0.46, 1.0",
+            "color_moles": "0.22, 0.18, 0.17, 1.0",
+            "color_blush": "0.95, 0.62, 0.56, 1.0"
         }
 
         this.blush_colors = {
-            "default":  "0., 0., 0., 0.",
-            "color_1": "0.807843137254902, 0.24705882352941178, 0.24705882352941178, 0.6",
-            "color_2": "0.8, 0.34901960784313724, 0.41568627450980394, 0.6",
-            "color_3": "0.9215686274509803, 0.5215686274509804, 0.5568627450980392, 0.6",
-            "color_4": "0.7568627450980392, 0.48627450980392156, 0.43529411764705883, 0.6",
-            "color_5": "0.8117647058823529, 0.5725490196078431, 0.4823529411764706, 0.6",
-            "color_6": "0.8666666666666667, 0.4980392156862745, 0.45098039215686275, 0.6",
-            "color_7": "0.7725490196078432, 0.4745098039215686, 0.5372549019607843, 0.6",
-            "color_8": "0.8666666666666667, 0.7647058823529411, 0.807843137254902, 0.6",
+            "none":  "0., 0., 0., 0.",
+            "default": "0.807843137254902, 0.24705882352941178, 0.24705882352941178, 1.",
+            "color_1": "0.807843137254902, 0.24705882352941178, 0.24705882352941178, 1.",
+            "color_2": "0.8, 0.34901960784313724, 0.41568627450980394, 1.",
+            "color_3": "0.9215686274509803, 0.5215686274509804, 0.5568627450980392, 1.",
+            "color_4": "0.7568627450980392, 0.48627450980392156, 0.43529411764705883, 1.",
+            "color_5": "0.8117647058823529, 0.5725490196078431, 0.4823529411764706, 1.",
+            "color_6": "0.8666666666666667, 0.4980392156862745, 0.45098039215686275, 1.",
+            "color_7": "0.7725490196078432, 0.4745098039215686, 0.5372549019607843, 1.",
+            "color_8": "0.8666666666666667, 0.7647058823529411, 0.807843137254902, 1.",
 
         }
 
         this.lips_colors = {
-            "default": "0.9176470588235294, 0.20392156862745098, 0.30980392156862746, 0.3",
+            "default": "0., 0.0, 0.0, 0.",
             "color_1": "0.9176470588235294, 0.20392156862745098, 0.30980392156862746, 1.",
             "color_2": "0.9294117647058824, 0.7529411764705882, 0.7647058823529411, 1.",
             "color_3": "0.8274509803921568, 0.5058823529411764, 0.6, 1.",
@@ -226,18 +233,17 @@ class Face {
             "color_10": "0.615686274509804, 0.34901960784313724, 0.37254901960784315, 1.",
             "color_11": "0.5176470588235295, 0.27058823529411763, 0.34509803921568627, 1.",
             "color_12": "0.44313725490196076, 0.19215686274509805, 0.27058823529411763, 1.",
-            "color_13": "0.30196078431372547, 0.06274509803921569, 0.13333333333333333, 1.",
-            "color_14": "0.9372549019607843, 0.9372549019607843, 0.9254901960784314, 1.",
-            "color_15": "0.7686274509803922, 0.1843137254901961, 0.4588235294117647,1.",
-            "color_16": "0.5607843137254902, 0.2196078431372549, 0.5764705882352941,1.",
-            "color_17": "0.4588235294117647, 0.3607843137254902, 0.6784313725490196,1.",
-            "color_18": "0.27450980392156865, 0.3607843137254902, 0.7529411764705882,1.",
-            "color_19": "0.19215686274509805, 0.47058823529411764, 0.8117647058823529,1.",
-            "color_20": "0.28627450980392155, 0.6352941176470588, 0.6352941176470588,1.",
-            "color_21": "0.3803921568627451, 0.5764705882352941, 0.1568627450980392,1.",
-            "color_22": "0.6627450980392157, 0.6431372549019608, 0.19215686274509805,1.",
-            "color_23": "0.9450980392156862, 0.6392156862745098, 0.22745098039215686,1.",
-            "color_24": "0.8588235294117647, 0.38823529411764707, 0.1607843137254902,1.",
+            "color_13": "0.9372549019607843, 0.9372549019607843, 0.9254901960784314, 1.",
+            "color_14": "0.7686274509803922, 0.1843137254901961, 0.4588235294117647,1.",
+            "color_15": "0.5607843137254902, 0.2196078431372549, 0.5764705882352941,1.",
+            "color_16": "0.4588235294117647, 0.3607843137254902, 0.6784313725490196,1.",
+            "color_17": "0.27450980392156865, 0.3607843137254902, 0.7529411764705882,1.",
+            "color_18": "0.19215686274509805, 0.47058823529411764, 0.8117647058823529,1.",
+            "color_19": "0.28627450980392155, 0.6352941176470588, 0.6352941176470588,1.",
+            "color_20": "0.3803921568627451, 0.5764705882352941, 0.1568627450980392,1.",
+            "color_21": "0.6627450980392157, 0.6431372549019608, 0.19215686274509805,1.",
+            "color_22": "0.9450980392156862, 0.6392156862745098, 0.22745098039215686,1.",
+            "color_23": "0.8588235294117647, 0.38823529411764707, 0.1607843137254902,1.",
         }
     
         this.rstd = am.findMaterial("unused").findParameter("face_shape_rstd");
@@ -253,6 +259,8 @@ class Face {
     
         this.gender = am.findMaterial("unused").findParameter("face_gender");
     
+        this.base_texture = am.findImage("body_Base").asTexture();
+        this.overlay_texture = am.findImage("overlay").asTexture();
         this.wrinkles = am.findImage("wrinkles").asTexture();
         this.freckles = am.findImage("freckles").asTexture();
         this.moles = am.findImage("moles").asTexture();
@@ -304,7 +312,7 @@ class Face {
                     let path = params.type.substring(1);
                     this.wrinkles.load(path)
                 }else{
-                    this.images.makeup.wrinkles[params.type] && this.wrinkles.load(this.images.makeup.wrinkles[params.type])
+                    this.wrinkles.load(this.images.makeup.wrinkles[params.type])
     
                 }
             }
@@ -313,7 +321,7 @@ class Face {
                 if(params.color.charAt(0) == "@"){
                     c = params.color.substring(1);
                 } else {
-                    c = this.makeup_colors[params.color] || this.makeup_colors["default"];
+                    c = this.makeup_colors[params.color] || this.makeup_colors["none"];
                 }
                 const [x,y,z, w] = c.split(',')
                 this.wrinkles_color.setVector4(new bnb.Vec4(x,y,z,w));
@@ -328,7 +336,7 @@ class Face {
                     let path = params.type.substring(1);
                     this.blush.load(path)
                 }else{
-                    this.images.makeup.blush[params.type] && this.blush.load(this.images.makeup.blush[params.type])
+                    this.blush.load(this.images.makeup.blush[params.type])
                 }
             }
             if(params.color){
@@ -351,7 +359,7 @@ class Face {
                     let path = params.type.substring(1);
                     this.moles.load(path)
                 }else{
-                    this.images.makeup.moles[params.type] && this.moles.load(this.images.makeup.moles[params.type])
+                    this.moles.load(this.images.makeup.moles[params.type])
                 }
             }
             if(params.color){
@@ -359,7 +367,7 @@ class Face {
                 if(params.color.charAt(0) == "@"){
                     c = params.color.substring(1);
                 } else {
-                    c = this.makeup_colors[params.color] || this.makeup_colors["default"];
+                    c = this.makeup_colors[params.color] || this.makeup_colors["none"];
                 }
                 const [x,y,z, w] = c.split(',')
                 this.moles_color.setVector4(new bnb.Vec4(x,y,z,w));
@@ -373,14 +381,14 @@ class Face {
                 let path = params.type.substring(1);
                 this.freckles.load(path)
             }else{
-                this.images.makeup.freckles[params.type] && this.freckles.load(this.images.makeup.freckles[params.type])
+                this.freckles.load(this.images.makeup.freckles[params.type])
 
             }
             let c;
             if(params.color.charAt(0) == "@"){
                 c = params.color.substring(1);
             } else {
-                c = this.makeup_colors[params.color] || this.makeup_colors["default"];
+                c = this.makeup_colors[params.color] || this.makeup_colors["none"];
             }
             const [x,y,z, w] = c.split(',')
             this.freckles_color.setVector4(new bnb.Vec4(x,y,z,w));
@@ -389,18 +397,16 @@ class Face {
 
     setGender(gender){
         if(gender){
-            bnb.log(gender)
-            if(gender.charAt(0) == "@"){
-                this.gender.setVector4(new bnb.Vec4(gender.substring(1)))
-                return
-            }
-
             switch(gender){
                 case "male":
-                    this.gender.setVector4(new bnb.Vec4(1.))
+                    this.base_texture.load(this.images.male.base)
+                    this.overlay_texture.load(this.images.male.overlay)
+                    this.gender.setVector4(new bnb.Vec4(0.))
                     break;
                 case "female":
-                    this.gender.setVector4(new bnb.Vec4(0.))
+                    this.base_texture.load(this.images.female.base)
+                    this.overlay_texture.load(this.images.female.overlay)
+                    this.gender.setVector4(new bnb.Vec4(0.7))
                     break;
             }
         }
@@ -430,12 +436,12 @@ class Face {
             case "matte":
                 metallic = 0.05
                 roughness = 0.35
-                this.lips_glitter.load(this.images.lips.default)
+                this.lips_glitter.load(this.images.lips.none)
                 break;
             case "glossy":
                 metallic = 1.0
                 roughness = 0.0
-                this.lips_glitter.load(this.images.lips.default)
+                this.lips_glitter.load(this.images.lips.none)
                 break;
             case "glitter":
                 metallic = 1.0

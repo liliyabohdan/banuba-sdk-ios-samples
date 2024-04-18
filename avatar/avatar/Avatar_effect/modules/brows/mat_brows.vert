@@ -76,7 +76,7 @@ void main()
     {
         float bs_w;
         bs_w = mix(bnb_AU[i>>2][i&3], 0.0, is_face_anim.y);
-        
+
         if(i == 41)
             bs_w = face_shape_rstd.x; // ShapeFaceRound
         if(i == 42)

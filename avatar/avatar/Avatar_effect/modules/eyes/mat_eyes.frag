@@ -78,51 +78,6 @@ float diffuse_factor( float n_l, float w )
     return pow( max( 0., n_l + w )/w1, w1 );
 }
 
-vec2 rgb_hs( vec3 rgb )
-{
-    float cmax = max(rgb.r, max(rgb.g, rgb.b));
-    float cmin = min(rgb.r, min(rgb.g, rgb.b));
-    float delta = cmax - cmin;
-    vec2 hs = vec2(0.);
-    if( cmax > cmin )
-    {
-        hs.y = delta/cmax;
-        if( rgb.r == cmax )
-            hs.x = (rgb.g-rgb.b)/delta;
-        else
-        {
-            if( rgb.g == cmax )
-                hs.x = 2.+(rgb.b-rgb.r)/delta;
-            else
-                hs.x = 4.+(rgb.r-rgb.g)/delta;
-        }
-        hs.x = fract(hs.x/6.);
-    }
-    return hs;
-}
-
-float rgb_v( vec3 rgb )
-{
-    return max(rgb.r, max(rgb.g, rgb.b));
-}
-
-vec3 hsv_rgb( float h, float s, float v )
-{
-    return v*mix(vec3(1.),clamp(abs(fract(vec3(1.,2./3.,1./3.)+h)*6.-3.)-1.,0.,1.),s);
-}
-
-vec3 blendColor(vec3 base, vec3 blend)
-{
-    float v = rgb_v( base );
-    vec2 hs = rgb_hs( blend );
-    return hsv_rgb( hs.x, hs.y, v );
-}
-
-vec3 blendColor(vec3 base, vec3 blend, float opacity)
-{
-    return (blendColor(base, blend) * opacity + base * (1.0 - opacity));
-}
-
 void main()
 {
 
@@ -148,7 +103,7 @@ void main()
 	vec3 mrao = BNB_TEXTURE_2D(BNB_SAMPLER_2D(metallic_roughness),var_uv).xyz;
 
 	float metallic = mrao.z;
-	float roughness = 0.15;
+	float roughness = mrao.y;
 
 	vec3 N = normalize( mat3(var_t,var_b,var_n)*(BNB_TEXTURE_2D(BNB_SAMPLER_2D(normal),var_uv).xyz*2.-1.) );
 
@@ -193,5 +148,5 @@ void main()
         color += ( kD_light*base/3.14159265 + specular )*radiance[i]*diffuse_factor( N_L, lwrap );
     }
 
-	bnb_FragColor = vec4(l2g(blendColor(color, g2l(eyes_color.xyz), 1.0)),opacity);
+	bnb_FragColor = vec4(l2g(color),opacity);
 }

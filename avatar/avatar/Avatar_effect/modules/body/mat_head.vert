@@ -29,6 +29,8 @@ BNB_DECLARE_SAMPLER_2D(10, 11, bnb_BONES);
 
 BNB_DECLARE_SAMPLER_2D_ARRAY(12, 13, tex_blend_shapes);
 
+BNB_DECLARE_SAMPLER_2D(16, 17, tex_mv);
+
 
 BNB_OUT(0) vec2 var_uv;
 BNB_OUT(1) vec3 var_t;
@@ -85,7 +87,7 @@ void main()
         bs_w = mix(bnb_AU[i>>2][i&3], 0.0, is_face_anim.y);
 
         if(i == 3 || i == 4){
-            bs_w = bs_w + mouth_shape_sv_sh_pv_smile.w;
+            bs_w = max(bs_w,mouth_shape_sv_sh_pv_smile.w);
         }
                         // hack to hide trembling of EyeBlinkRight and EyeBlinkLeft:
         if( i == 35 || i == 36 )

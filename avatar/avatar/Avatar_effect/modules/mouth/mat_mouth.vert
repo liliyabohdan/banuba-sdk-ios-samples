@@ -78,8 +78,7 @@ void main()
                 float bs_w;
         bs_w = mix(bnb_AU[i>>2][i&3], 0.0, is_face_anim.y);
         if(i == 3 || i == 4){
-            bs_w = bs_w + mouth_shape_sv_sh_pv_smile.w;
-
+            bs_w = max(bs_w,mouth_shape_sv_sh_pv_smile.w);
         }
         if(i == 7)
             bs_w = face_shape_rstd.x; // ShapeFaceRound

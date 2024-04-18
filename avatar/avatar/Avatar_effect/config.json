@@ -94,7 +94,7 @@
 		},
 		"images": {
 			"body_Base": {
-				"file_name": "modules/body/female_head_BaseColor.jpg",
+				"file_name": "modules/body/male_head_BaseColor.jpg",
 				"type": "texture"
 			},
 			"body_MR": {
@@ -198,19 +198,19 @@
 				"type": "texture"
 			},
 			"hat_Base": {
-				"file_name": "modules/headwear/images/hat_01_Base.jpg",
+				"file_name": "modules/headwear/images/hat_02_Base.png",
 				"type": "texture"
 			},
 			"hat_MR": {
-				"file_name": "modules/headwear/images/hat_01_MR.jpg",
+				"file_name": "modules/headwear/images/hat_02_MR.png",
 				"type": "texture"
 			},
 			"hat_Normal": {
-				"file_name": "modules/headwear/images/hat_01_Normal.jpg",
+				"file_name": "modules/headwear/images/hat_02_Normal.png",
 				"type": "texture"
 			},
 			"hat_blendshapes": {
-				"file_name": "modules/headwear/images/blendshapes_hat_01.ktx",
+				"file_name": "modules/headwear/images/blendshapes_hat_02.ktx",
 				"type": "texture"
 			},
 			"mustache_Base": {
@@ -246,11 +246,7 @@
 				"type": "texture"
 			},
 			"earrings_L_Base": {
-				"file_name": "modules/ears/images/earring_01_Base.png",
-				"type": "texture"
-			},
-			"earrings_L_MR": {
-				"file_name": "modules/ears/images/earring_01_MR.png",
+				"file_name": "modules/ears/images/earring_01_L_Base.png",
 				"type": "texture"
 			},
 			"earrings_L_Normal": {
@@ -258,15 +254,11 @@
 				"type": "texture"
 			},
 			"earrings_L_blendshapes": {
-				"file_name": "modules/ears/images/blendshapes_earring_01_L.ktx",
+				"file_name": "modules/ears/images/blendshapes_earrings_L.ktx",
 				"type": "texture"
 			},
 			"earrings_R_Base": {
-				"file_name": "modules/ears/images/earring_01_Base.png",
-				"type": "texture"
-			},
-			"earrings_R_MR": {
-				"file_name": "modules/ears/images/earring_01_MR.png",
+				"file_name": "modules/ears/images/earring_01_R_Base.png",
 				"type": "texture"
 			},
 			"earrings_R_Normal": {
@@ -274,7 +266,7 @@
 				"type": "texture"
 			},
 			"earrings_R_blendshapes": {
-				"file_name": "modules/ears/images/blendshapes_earring_01_R.ktx",
+				"file_name": "modules/ears/images/blendshapes_earrings_R.ktx",
 				"type": "texture"
 			},
 			"mouth_Base": {
@@ -346,11 +338,15 @@
 				"type": "texture"
 			},
 			"overlay": {
-				"file_name": "modules/body/female_head_overlay.jpg",
+				"file_name": "modules/body/male_head_overlay.jpg",
 				"type": "texture"
 			},
 			"ears_overlay": {
 				"file_name": "modules/ears/images/ears_overlay.jpg",
+				"type": "texture"
+			},
+			"base": {
+				"file_name": "modules/body/male_head_BaseColor.jpg",
 				"type": "texture"
 			},
 			"foreground": {
@@ -910,16 +906,12 @@
 					"zwrite": true
 				}
 			},
-			"mat_earring_01_L": {
+			"mat_earring_L": {
 				"path": "modules/ears/mat_earring_L",
 				"samplers": [
 					{
 						"image": "earrings_L_Base",
 						"name": "base_color"
-					},
-					{
-						"image": "earrings_L_MR",
-						"name": "metallic_roughness"
 					},
 					{
 						"image": "earrings_L_Normal",
@@ -949,16 +941,12 @@
 					"zwrite": true
 				}
 			},
-			"mat_earring_01_R": {
+			"mat_earring_R": {
 				"path": "modules/ears/mat_earring_R",
 				"samplers": [
 					{
 						"image": "earrings_R_Base",
 						"name": "base_color"
-					},
-					{
-						"image": "earrings_R_MR",
-						"name": "metallic_roughness"
 					},
 					{
 						"image": "earrings_R_Normal",
@@ -1192,6 +1180,35 @@
 					"zwrite": false
 				}
 			},
+			"shaders/plane_2": {
+                "built_in_samplers": [
+                    "bnb_BONES",
+                    "bnb_UVMORPH_FISHEYE",
+                    "bnb_MORPH"
+                ],
+                "samplers": [
+                    {
+                        "image": "tap",
+                        "name": "glfx_VIDEO"
+                    },
+                    {
+                        "name": "bnb_BONES"
+                    },
+                    {
+                        "name": "bnb_UVMORPH_FISHEYE"
+                    },
+                    {
+                        "name": "bnb_MORPH"
+                    }
+                ],
+                "state": {
+                    "backfaces": true,
+                    "blend": "alpha",
+                    "colorwrite": true,
+                    "ztest": false,
+                    "zwrite": false
+                }
+            },
 			"unused": {
 				"path": "shaders/unused",
 				"parameters": {
@@ -1598,6 +1615,14 @@
 				}
 			}
 		},
+		"media": {
+            "tap": {
+                "file_name": "videos/tap.mp4",
+                "looped": true,
+                "play": true,
+                "type": "video"
+            }
+        },
 		"meshes": {
 			"!scene_FACE": "$builtin$meshes/face.stream:0",
 			"quad": "$builtin$meshes/quad",
@@ -1614,9 +1639,35 @@
 			"brows": "meshes/brows.bsm2",
 			"mouth": "meshes/mouth.bsm2",
 			"mustache_02": "meshes/mustache_02.bsm2",
-			"hat_01": "meshes/hat_01.bsm2",
+			"hat_02": "meshes/hat_02.bsm2",
 			"hair_01": "meshes/hair_01.bsm2",
+			"hair_02": "meshes/hair_02.bsm2",
+			"hair_03": "meshes/hair_03.bsm2",
+			"hair_04": "meshes/hair_04.bsm2",
+			"hair_05": "meshes/hair_05.bsm2",
+			"hair_06": "meshes/hair_06.bsm2",
+			"hair_07": "meshes/hair_07.bsm2",
+			"hair_08": "meshes/hair_08.bsm2",
+			"hair_09": "meshes/hair_09.bsm2",
+			"hair_10": "meshes/hair_10.bsm2",
+			"hair_11": "meshes/hair_11.bsm2",
+			"hair_12": "meshes/hair_12.bsm2",
+			"hair_13": "meshes/hair_13.bsm2",
 			"cloth_01": "meshes/cloth_01.bsm2",
+			"cloth_02": "meshes/cloth_02.bsm2",
+			"cloth_03": "meshes/cloth_03.bsm2",
+			"cloth_04": "meshes/cloth_04.bsm2",
+			"cloth_05": "meshes/cloth_05.bsm2",
+			"cloth_06": "meshes/cloth_06.bsm2",
+			"cloth_07": "meshes/cloth_07.bsm2",
+			"cloth_08": "meshes/cloth_08.bsm2",
+			"cloth_09": "meshes/cloth_09.bsm2",
+			"cloth_10": "meshes/cloth_10.bsm2",
+			"cloth_11": "meshes/cloth_11.bsm2",
+			"cloth_12": "meshes/cloth_12.bsm2",
+			"cloth_13": "meshes/cloth_13.bsm2",
+			"cloth_14": "meshes/cloth_14.bsm2",
+			"plane": "meshes/plane.bsm2",
 			"glasses_01": "meshes/glasses_01.bsm2"
 		}
 	},
@@ -1711,7 +1762,7 @@
 			"materials": [
 				"mat_hat_01"
 			],
-			"mesh": "hat_01",
+			"mesh": "hat_02",
 			"type": "mesh_instance"
 		},
 		"Mustache": {
@@ -1744,14 +1795,14 @@
 		},
 		"Earring_L": {
 			"materials": [
-				"mat_earring_01_L"
+				"mat_earring_L"
 			],
 			"mesh": "earring_01_L",
 			"type": "mesh_instance"
 		},
 		"Earring_R": {
 			"materials": [
-				"mat_earring_01_R"
+				"mat_earring_R"
 			],
 			"mesh": "earring_01_R",
 			"type": "mesh_instance"
@@ -1770,6 +1821,17 @@
 			"components": [
 				"face_tracker:0"
 			]
+		},
+		"plane": {
+			"components": {
+				"mesh_instance": {
+					"materials": [
+						"shaders/plane_2"
+					],
+					"mesh": "plane"
+				}
+			},
+			"layer": "plane"
 		},
 		"UpdateBG": {
 			"components": {
@@ -1987,6 +2049,7 @@
 		],
 		"root": [
 			"face_tracker0",
+			"plane",
 			"Foreground",
 			"Body",
 			"Hair",
@@ -2011,6 +2074,10 @@
 		]
 	},
 	"layers": {},
+	"main_camera": {
+        "adjust_zfar": 1500,
+        "adjust_znear": 500
+    },
 	"render_list": {
 		"default": [
 			{
@@ -2097,14 +2164,14 @@
 			{
 				"layer": "Earring_L",
 				"sub_geometries": [
-					"mat_earring_01_L"
+					"mat_earring_L"
 				],
 				"render_target": "cameraRT"
 			},
 			{
 				"layer": "Earring_R",
 				"sub_geometries": [
-					"mat_earring_01_R"
+					"mat_earring_R"
 				],
 				"render_target": "cameraRT"
 			},
@@ -2151,6 +2218,10 @@
 			},
 			{
 				"layer": "Lut",
+				"render_target": "lutRT"
+			},
+			{
+				"layer": "plane",
 				"render_target": "lutRT"
 			}
 		]
