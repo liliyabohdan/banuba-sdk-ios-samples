@@ -12,7 +12,7 @@
 		1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */; };
 		1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1383E9AF2BCE9F5500660AE3 /* libcommon.a */; };
 		1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9C12BCEA5F300660AE3 /* BanubaSdk */; };
-		1383E9C62BCEB91700660AE3 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9C52BCEB91700660AE3 /* effects */; };
+		13D72AEF2BD259B0003AB6E0 /* Makeup in Resources */ = {isa = PBXBuildFile; fileRef = 13D72AEE2BD259B0003AB6E0 /* Makeup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 		1383E99F2BCE98D500660AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1383E9A52BCE9F5100660AE3 /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		1383E9B62BCE9FFF00660AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../common/common/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1383E9C52BCEB91700660AE3 /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = effects; path = ../../common/common/effects; sourceTree = "<group>"; };
+		13D72AEE2BD259B0003AB6E0 /* Makeup */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Makeup; path = ../../common/common/Makeup; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 		1383E9902BCE98D400660AE3 /* photo_processing */ = {
 			isa = PBXGroup;
 			children = (
-				1383E9C52BCEB91700660AE3 /* effects */,
+				13D72AEE2BD259B0003AB6E0 /* Makeup */,
 				1383E9952BCE98D400660AE3 /* ViewController.swift */,
 				1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */,
 				1383E9972BCE98D400660AE3 /* Main.storyboard */,
@@ -173,7 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E9C62BCEB91700660AE3 /* effects in Resources */,
+				13D72AEF2BD259B0003AB6E0 /* Makeup in Resources */,
 				1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */,
 				1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */,
 			);
