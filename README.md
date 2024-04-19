@@ -25,7 +25,8 @@ This repository contains the following examples:
 - [`video_recording`](video_recording/) apply effect to video from camera and record video,
 - [`avatar`](avatar/) customizable avatar effect (see comments in code how to change the avatar),
 - [`beauty`](beauty/) basic sample how to aply beauty, this sample can be used for medical application too,
-- [`photo_edit`](photo_edit/) apply Makeup effect to photo and use Makeup API in realtime.    
+- [`photo_edit`](photo_edit/) apply Makeup effect to photo and use Makeup API in realtime,   
+- [`videocall`](videocall/) demonstrates Agora.io SDK integration to enable augmented reality filters in video calls.
 
 ### Docs
 You can find more info [here](https://docs.banuba.com/face-ar-sdk-v1/ios/ios_overview).
