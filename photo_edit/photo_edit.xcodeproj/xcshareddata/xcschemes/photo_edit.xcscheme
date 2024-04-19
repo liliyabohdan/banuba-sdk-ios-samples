@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1383E98D2BCE98D400660AE3"
-               BuildableName = "photo_processing.app"
-               BlueprintName = "photo_processing"
-               ReferencedContainer = "container:photo_processing.xcodeproj">
+               BuildableName = "photo_edit.app"
+               BlueprintName = "photo_edit"
+               ReferencedContainer = "container:photo_edit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1383E98D2BCE98D400660AE3"
-            BuildableName = "photo_processing.app"
-            BlueprintName = "photo_processing"
-            ReferencedContainer = "container:photo_processing.xcodeproj">
+            BuildableName = "photo_edit.app"
+            BlueprintName = "photo_edit"
+            ReferencedContainer = "container:photo_edit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1383E98D2BCE98D400660AE3"
-            BuildableName = "photo_processing.app"
-            BlueprintName = "photo_processing"
-            ReferencedContainer = "container:photo_processing.xcodeproj">
+            BuildableName = "photo_edit.app"
+            BlueprintName = "photo_edit"
+            ReferencedContainer = "container:photo_edit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
