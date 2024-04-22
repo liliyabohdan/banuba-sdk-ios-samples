@@ -28,5 +28,7 @@ This repository contains the following examples:
 - [`photo_edit`](photo_edit/) apply Makeup effect to photo and use Makeup API in realtime,   
 - [`videocall`](videocall/) demonstrates Agora.io SDK integration to enable augmented reality filters in video calls.
 
+Please, note, that individual samples may contain own `README` files. Consider them.
+
 ### Docs
 You can find more info [here](https://docs.banuba.com/face-ar-sdk-v1/ios/ios_overview).
