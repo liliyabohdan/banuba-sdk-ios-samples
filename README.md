@@ -26,7 +26,7 @@ This repository contains the following examples:
 - [`avatar`](avatar/) customizable avatar effect (see comments in code how to change the avatar),
 - [`beauty`](beauty/) basic sample how to aply beauty, this sample can be used for medical application too,
 - [`photo_edit`](photo_edit/) apply Makeup effect to photo and use Makeup API in realtime, 
-- [`hands`](hands/) set of samples related to hands (nails recolor, rings, watch),  
+- [`hands`](hands/) set of samples related to hands (rings, watch, gestures etc.),  
 - [`videocall`](videocall/) demonstrates Agora.io SDK integration to enable augmented reality filters in video calls.
 
 Please, note, that individual samples may contain own `README` files. Consider them.
