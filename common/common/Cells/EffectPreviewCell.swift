@@ -46,6 +46,11 @@ class EffectPreviewCell: ReusableCell {
         case let .templatedIcon(named, letter):
             imageView.image = UIImage(named: named)
             letterLabel.text = String(letter)
+        case let .fromEffect(pathToEffect):
+            imageView.image = UIImage(contentsOfFile: Bundle.main.bundlePath + "/" + pathToEffect + "/preview.png")
+            imageView.layer.borderColor = UIColor.white.cgColor
+            imageView.layer.borderWidth = 2
+            imageView.layer.cornerRadius = imageView.bounds.width / 2
         case .none:
             break
         }

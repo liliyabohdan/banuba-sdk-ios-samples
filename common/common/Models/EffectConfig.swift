@@ -4,6 +4,7 @@ enum EffectPreview: Hashable {
     case uniqueIcon(named: String)
     case color(hex: Int)
     case templatedIcon(named: String, letter: Character)
+    case fromEffect(pathToEffect: String)
     case none
 }
 
