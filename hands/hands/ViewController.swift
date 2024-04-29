@@ -45,6 +45,8 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         player?.use(input: Camera(cameraDevice: cameraDevice))
         player?.use(outputs: [effectView])
         
+        _ = player?.load(effect: ViewController.effectBasePath + "test_gestures")
+        
         // Start feeding frames from camera
         cameraDevice.start()
     }
