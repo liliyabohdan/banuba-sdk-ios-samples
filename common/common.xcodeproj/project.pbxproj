@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1383E9B22BCE9F7C00660AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383E9B12BCE9F7C00660AE3 /* AppDelegate.swift */; };
-		1383E9BC2BCEA2BF00660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9BB2BCEA2BF00660AE3 /* BanubaSdk */; };
+		13DF0CBB2BF623C000770192 /* BNBSdkApi in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CBA2BF623C000770192 /* BNBSdkApi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E9BC2BCEA2BF00660AE3 /* BanubaSdk in Frameworks */,
+				13DF0CBB2BF623C000770192 /* BNBSdkApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = common;
 			packageProductDependencies = (
-				1383E9BB2BCEA2BF00660AE3 /* BanubaSdk */,
+				13DF0CBA2BF623C000770192 /* BNBSdkApi */,
 			);
 			productName = common;
 			productReference = 1383E97B2BCE968400660AE3 /* libcommon.a */;
@@ -115,7 +115,7 @@
 			);
 			mainGroup = 1383E9722BCE968400660AE3;
 			packageReferences = (
-				1383E9BA2BCEA2BF00660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+				13DF0CB92BF623C000770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
 			);
 			productRefGroup = 1383E97C2BCE968400660AE3 /* Products */;
 			projectDirPath = "";
@@ -310,21 +310,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1383E9BA2BCEA2BF00660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+		13DF0CB92BF623C000770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.12.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1383E9BB2BCEA2BF00660AE3 /* BanubaSdk */ = {
+		13DF0CBA2BF623C000770192 /* BNBSdkApi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1383E9BA2BCEA2BF00660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */;
-			productName = BanubaSdk;
+			package = 13DF0CB92BF623C000770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
+			productName = BNBSdkApi;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

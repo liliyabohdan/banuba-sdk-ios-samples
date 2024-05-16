@@ -11,8 +11,11 @@
 		1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9972BCE98D400660AE3 /* Main.storyboard */; };
 		1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */; };
 		1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1383E9AF2BCE9F5500660AE3 /* libcommon.a */; };
-		1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9C12BCEA5F300660AE3 /* BanubaSdk */; };
 		1389282D2BD285B900E94AD2 /* Makeup in Resources */ = {isa = PBXBuildFile; fileRef = 1389282C2BD285B900E94AD2 /* Makeup */; };
+		13DF0CDF2BF62BEB00770192 /* BNBSdkApi in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CDE2BF62BEB00770192 /* BNBSdkApi */; };
+		13DF0CE22BF62BF300770192 /* BNBFaceTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE12BF62BF300770192 /* BNBFaceTracker */; };
+		13DF0CE52BF62C0100770192 /* BNBEyes in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE42BF62C0100770192 /* BNBEyes */; };
+		13DF0CE82BF62C0A00770192 /* BNBLips in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE72BF62C0A00770192 /* BNBLips */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */,
+				13DF0CE22BF62BF300770192 /* BNBFaceTracker in Frameworks */,
 				1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */,
+				13DF0CE82BF62C0A00770192 /* BNBLips in Frameworks */,
+				13DF0CDF2BF62BEB00770192 /* BNBSdkApi in Frameworks */,
+				13DF0CE52BF62C0100770192 /* BNBEyes in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +116,10 @@
 			);
 			name = beauty;
 			packageProductDependencies = (
-				1383E9C12BCEA5F300660AE3 /* BanubaSdk */,
+				13DF0CDE2BF62BEB00770192 /* BNBSdkApi */,
+				13DF0CE12BF62BF300770192 /* BNBFaceTracker */,
+				13DF0CE42BF62C0100770192 /* BNBEyes */,
+				13DF0CE72BF62C0A00770192 /* BNBLips */,
 			);
 			productName = camera;
 			productReference = 1383E98E2BCE98D400660AE3 /* beauty.app */;
@@ -141,7 +150,10 @@
 			);
 			mainGroup = 1383E9852BCE98D400660AE3;
 			packageReferences = (
-				1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+				13DF0CDD2BF62BEB00770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
+				13DF0CE02BF62BF300770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */,
+				13DF0CE32BF62C0100770192 /* XCRemoteSwiftPackageReference "BNBEyes" */,
+				13DF0CE62BF62C0A00770192 /* XCRemoteSwiftPackageReference "BNBLips" */,
 			);
 			productRefGroup = 1383E98F2BCE98D400660AE3 /* Products */;
 			projectDirPath = "";
@@ -413,21 +425,60 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+		13DF0CDD2BF62BEB00770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.12.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+		13DF0CE02BF62BF300770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBFaceTracker";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+		13DF0CE32BF62C0100770192 /* XCRemoteSwiftPackageReference "BNBEyes" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBEyes";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+		13DF0CE62BF62C0A00770192 /* XCRemoteSwiftPackageReference "BNBLips" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBLips";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1383E9C12BCEA5F300660AE3 /* BanubaSdk */ = {
+		13DF0CDE2BF62BEB00770192 /* BNBSdkApi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */;
-			productName = BanubaSdk;
+			package = 13DF0CDD2BF62BEB00770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
+			productName = BNBSdkApi;
+		};
+		13DF0CE12BF62BF300770192 /* BNBFaceTracker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13DF0CE02BF62BF300770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */;
+			productName = BNBFaceTracker;
+		};
+		13DF0CE42BF62C0100770192 /* BNBEyes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13DF0CE32BF62C0100770192 /* XCRemoteSwiftPackageReference "BNBEyes" */;
+			productName = BNBEyes;
+		};
+		13DF0CE72BF62C0A00770192 /* BNBLips */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13DF0CE62BF62C0A00770192 /* XCRemoteSwiftPackageReference "BNBLips" */;
+			productName = BNBLips;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

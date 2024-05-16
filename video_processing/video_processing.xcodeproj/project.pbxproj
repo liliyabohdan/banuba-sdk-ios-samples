@@ -11,9 +11,10 @@
 		1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9972BCE98D400660AE3 /* Main.storyboard */; };
 		1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */; };
 		1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1383E9AF2BCE9F5500660AE3 /* libcommon.a */; };
-		1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9C12BCEA5F300660AE3 /* BanubaSdk */; };
 		1383E9C62BCEB91700660AE3 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9C52BCEB91700660AE3 /* effects */; };
 		13CD70BA2BD10D0F003E2804 /* VideoProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD70B92BD10D0F003E2804 /* VideoProcessing.swift */; };
+		13D24FB22BF631270016E5A6 /* BNBSdkApi in Frameworks */ = {isa = PBXBuildFile; productRef = 13D24FB12BF631270016E5A6 /* BNBSdkApi */; };
+		13D24FB52BF631350016E5A6 /* BNBFaceTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 13D24FB42BF631350016E5A6 /* BNBFaceTracker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */,
+				13D24FB52BF631350016E5A6 /* BNBFaceTracker in Frameworks */,
 				1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */,
+				13D24FB22BF631270016E5A6 /* BNBSdkApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +115,8 @@
 			);
 			name = video_processing;
 			packageProductDependencies = (
-				1383E9C12BCEA5F300660AE3 /* BanubaSdk */,
+				13D24FB12BF631270016E5A6 /* BNBSdkApi */,
+				13D24FB42BF631350016E5A6 /* BNBFaceTracker */,
 			);
 			productName = camera;
 			productReference = 1383E98E2BCE98D400660AE3 /* video_processing.app */;
@@ -144,7 +147,8 @@
 			);
 			mainGroup = 1383E9852BCE98D400660AE3;
 			packageReferences = (
-				1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+				13D24FB02BF631270016E5A6 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
+				13D24FB32BF631350016E5A6 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */,
 			);
 			productRefGroup = 1383E98F2BCE98D400660AE3 /* Products */;
 			projectDirPath = "";
@@ -419,21 +423,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+		13D24FB02BF631270016E5A6 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.12.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+		13D24FB32BF631350016E5A6 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBFaceTracker";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1383E9C12BCEA5F300660AE3 /* BanubaSdk */ = {
+		13D24FB12BF631270016E5A6 /* BNBSdkApi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */;
-			productName = BanubaSdk;
+			package = 13D24FB02BF631270016E5A6 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
+			productName = BNBSdkApi;
+		};
+		13D24FB42BF631350016E5A6 /* BNBFaceTracker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13D24FB32BF631350016E5A6 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */;
+			productName = BNBFaceTracker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

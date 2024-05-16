@@ -11,8 +11,9 @@
 		1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9972BCE98D400660AE3 /* Main.storyboard */; };
 		1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */; };
 		1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1383E9AF2BCE9F5500660AE3 /* libcommon.a */; };
-		1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9C12BCEA5F300660AE3 /* BanubaSdk */; };
 		1383E9C62BCEB91700660AE3 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9C52BCEB91700660AE3 /* effects */; };
+		13DF0CCC2BF62AA200770192 /* BNBSdkApi in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CCB2BF62AA200770192 /* BNBSdkApi */; };
+		13DF0CD22BF62ABC00770192 /* BNBFaceTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CD12BF62ABC00770192 /* BNBFaceTracker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,6 +22,13 @@
 			containerPortal = 1383E9A52BCE9F5100660AE3 /* common.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1383E97B2BCE968400660AE3;
+			remoteInfo = common;
+		};
+		13DF0CC82BF6289600770192 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1383E9A52BCE9F5100660AE3 /* common.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1383E97A2BCE968400660AE3;
 			remoteInfo = common;
 		};
 /* End PBXContainerItemProxy section */
@@ -40,8 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */,
 				1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */,
+				13DF0CCC2BF62AA200770192 /* BNBSdkApi in Frameworks */,
+				13DF0CD22BF62ABC00770192 /* BNBFaceTracker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +116,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				13DF0CC92BF6289600770192 /* PBXTargetDependency */,
 			);
 			name = camera;
 			packageProductDependencies = (
-				1383E9C12BCEA5F300660AE3 /* BanubaSdk */,
+				13DF0CCB2BF62AA200770192 /* BNBSdkApi */,
+				13DF0CD12BF62ABC00770192 /* BNBFaceTracker */,
 			);
 			productName = camera;
 			productReference = 1383E98E2BCE98D400660AE3 /* camera.app */;
@@ -141,7 +152,8 @@
 			);
 			mainGroup = 1383E9852BCE98D400660AE3;
 			packageReferences = (
-				1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+				13DF0CCA2BF62AA200770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
+				13DF0CD02BF62ABC00770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */,
 			);
 			productRefGroup = 1383E98F2BCE98D400660AE3 /* Products */;
 			projectDirPath = "";
@@ -191,6 +203,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13DF0CC92BF6289600770192 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = common;
+			targetProxy = 13DF0CC82BF6289600770192 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1383E9972BCE98D400660AE3 /* Main.storyboard */ = {
@@ -413,21 +433,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+		13DF0CCA2BF62AA200770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+		13DF0CD02BF62ABC00770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBFaceTracker";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.12.0;
+				minimumVersion = 1.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1383E9C12BCEA5F300660AE3 /* BanubaSdk */ = {
+		13DF0CCB2BF62AA200770192 /* BNBSdkApi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */;
-			productName = BanubaSdk;
+			package = 13DF0CCA2BF62AA200770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
+			productName = BNBSdkApi;
+		};
+		13DF0CD12BF62ABC00770192 /* BNBFaceTracker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13DF0CD02BF62ABC00770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */;
+			productName = BNBFaceTracker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

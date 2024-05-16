@@ -11,7 +11,6 @@
 		1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9972BCE98D400660AE3 /* Main.storyboard */; };
 		1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */; };
 		1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1383E9AF2BCE9F5500660AE3 /* libcommon.a */; };
-		1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1383E9C12BCEA5F300660AE3 /* BanubaSdk */; };
 		13C1F94C2BD7BCD30081676C /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 13C1F94B2BD7BCD30081676C /* effects */; };
 		13C1F9512BD7DA290081676C /* EffectPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1F94E2BD7DA290081676C /* EffectPreviewCell.swift */; };
 		13C1F9522BD7DA290081676C /* EffectPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C1F94F2BD7DA290081676C /* EffectPreviewCell.xib */; };
@@ -19,6 +18,9 @@
 		13C1F9582BD7DBC50081676C /* EffectConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1F9562BD7DBC50081676C /* EffectConfig.swift */; };
 		13C1F95E2BD7DF7F0081676C /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1F95C2BD7DF7F0081676C /* UIColor+Utils.swift */; };
 		13C1F95F2BD7DF7F0081676C /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1F95D2BD7DF7F0081676C /* UICollectionView+Extension.swift */; };
+		13DF0CED2BF62C8500770192 /* BNBHands in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CEC2BF62C8500770192 /* BNBHands */; };
+		13DF0CF02BF62CA300770192 /* BNBWatch in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CEF2BF62CA300770192 /* BNBWatch */; };
+		13DF0CF32BF62CE700770192 /* BNBSdkApi in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CF22BF62CE700770192 /* BNBSdkApi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1383E9C22BCEA5F300660AE3 /* BanubaSdk in Frameworks */,
+				13DF0CED2BF62C8500770192 /* BNBHands in Frameworks */,
 				1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */,
+				13DF0CF02BF62CA300770192 /* BNBWatch in Frameworks */,
+				13DF0CF32BF62CE700770192 /* BNBSdkApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +159,9 @@
 			);
 			name = hands;
 			packageProductDependencies = (
-				1383E9C12BCEA5F300660AE3 /* BanubaSdk */,
+				13DF0CEC2BF62C8500770192 /* BNBHands */,
+				13DF0CEF2BF62CA300770192 /* BNBWatch */,
+				13DF0CF22BF62CE700770192 /* BNBSdkApi */,
 			);
 			productName = camera;
 			productReference = 1383E98E2BCE98D400660AE3 /* hands.app */;
@@ -186,7 +192,9 @@
 			);
 			mainGroup = 1383E9852BCE98D400660AE3;
 			packageReferences = (
-				1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */,
+				13DF0CEB2BF62C8500770192 /* XCRemoteSwiftPackageReference "BNBHands" */,
+				13DF0CEE2BF62CA300770192 /* XCRemoteSwiftPackageReference "BNBWatch" */,
+				13DF0CF12BF62CE700770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */,
 			);
 			productRefGroup = 1383E98F2BCE98D400660AE3 /* Products */;
 			projectDirPath = "";
@@ -464,21 +472,47 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */ = {
+		13DF0CEB2BF62C8500770192 /* XCRemoteSwiftPackageReference "BNBHands" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sdk-banuba/BanubaSdk";
+			repositoryURL = "https://github.com/sdk-banuba/BNBHands";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.12.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+		13DF0CEE2BF62CA300770192 /* XCRemoteSwiftPackageReference "BNBWatch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBWatch";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+		13DF0CF12BF62CE700770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1383E9C12BCEA5F300660AE3 /* BanubaSdk */ = {
+		13DF0CEC2BF62C8500770192 /* BNBHands */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1383E9C02BCEA5F300660AE3 /* XCRemoteSwiftPackageReference "BanubaSdk" */;
-			productName = BanubaSdk;
+			package = 13DF0CEB2BF62C8500770192 /* XCRemoteSwiftPackageReference "BNBHands" */;
+			productName = BNBHands;
+		};
+		13DF0CEF2BF62CA300770192 /* BNBWatch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13DF0CEE2BF62CA300770192 /* XCRemoteSwiftPackageReference "BNBWatch" */;
+			productName = BNBWatch;
+		};
+		13DF0CF22BF62CE700770192 /* BNBSdkApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13DF0CF12BF62CE700770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */;
+			productName = BNBSdkApi;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
