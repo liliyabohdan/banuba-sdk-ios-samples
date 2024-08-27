@@ -545,7 +545,7 @@
 			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 4.3.0;
+				minimumVersion = 4.3.2;
 			};
 		};
 		13D24FC02BF632760016E5A6 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
