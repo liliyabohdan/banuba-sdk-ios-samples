@@ -1,7 +1,7 @@
 # banuba-sdk-ios-samples
 [![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://docs.banuba.com/far-sdk/tutorials/development/basic_integration?platform=ios)
 
-## [Requirements](https://docs.banuba.com/face-ar-sdk-v1/overview/system_requirements)
+## [Requirements](https://docs.banuba.com/far-sdk/tutorials/capabilities/system_requirements)
 
 ## Usage
 ### Token
@@ -17,7 +17,7 @@ Feel free to [contact us](https://docs.banuba.com/far-sdk/support) if you have a
 2. Copy and Paste your client token into appropriate section of [`common/common/AppDelegate.swift`](common/common/AppDelegate.swift#L6)
 3. Open desired project in Xcode and run the example.
 
-## Examples for integrating [Banuba SDK on iOS](https://docs.banuba.com/face-ar-sdk-v1/ios/ios_getting_started) into Swift apps.  
+## Examples for integrating [Banuba SDK on iOS](https://docs.banuba.com/far-sdk/tutorials/development/basic_integration?platform=ios) into Swift apps.  
 This repository contains the following examples:   
 - [`camera`](camera/) apply effect to stream from camera and show it on the screen,  
 - [`photo`](photo/) apply effect to photo from the gallery,  
