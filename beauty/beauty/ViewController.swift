@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         // Connect `CameraDevice` and `EffectPlayerView` to `Player`
         player?.use(input: Camera(cameraDevice: cameraDevice))
         player?.use(outputs: [effectView])
+        player?.play()
         
         // Load effect from `effects` folder
         effect = player?.load(effect: "Makeup")

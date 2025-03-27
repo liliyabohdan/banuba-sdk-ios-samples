@@ -21,6 +21,7 @@ class VideoRecordingViewController: UIViewController {
         videoOutput = Video(cameraDevice: cameraDevice)
         
         player?.use(input: Camera(cameraDevice: cameraDevice), outputs: [effectView, videoOutput!])
+        player?.play();
         cameraDevice.start()
     }
     

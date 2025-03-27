@@ -44,6 +44,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         // Connect `CameraDevice` and `EffectPlayerView` to `Player`
         player?.use(input: Camera(cameraDevice: cameraDevice))
         player?.use(outputs: [effectView])
+        player?.play()
         
         _ = player?.load(effect: ViewController.effectBasePath + "test_gestures")
         

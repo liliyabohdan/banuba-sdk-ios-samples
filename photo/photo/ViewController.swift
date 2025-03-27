@@ -24,6 +24,7 @@ class PhotosViewController: UIViewController {
 
         // Change render mode to manual, to exactly control when player will render
         player?.renderMode = .manual
+        player?.play()
         
         // Load effect from `effects` folder synchronously
         effect = player?.load(effect: "TrollGrandma", sync: true)

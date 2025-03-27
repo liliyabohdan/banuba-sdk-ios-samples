@@ -20,6 +20,7 @@ class PhotoEditingViewController: UIViewController {
         
         player.effectPlayer.effectManager()?.add(self)
         player.use(input: photo, outputs: [effectView])
+        player.play()
         
         // Load Makeup effect from `effects` folder
         makeup = player.load(effect: "Makeup")

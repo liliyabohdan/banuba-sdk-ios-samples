@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         // Connect `CameraDevice` and `EffectPlayerView` to `Player`
         player?.use(input: Camera(cameraDevice: cameraDevice))
         player?.use(outputs: [effectView])
+        player?.play()
         
         // Load avatar effect from app bundle. It will use the config provided
         // in `setState` call from here

@@ -32,6 +32,7 @@ class VideoViewController: UIViewController {
         // Use manual render mode to control when pixel buffer should be presented
         player.renderMode = .manual
         player.use(input: stream, outputs: [pixelBufferOutput])
+        player.play()
         _ = player.load(effect: "TrollGrandma", sync: true)
         
         avPlayerVC?.view.isHidden = true
