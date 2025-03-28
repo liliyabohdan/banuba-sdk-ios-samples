@@ -49,6 +49,8 @@ final class MainScreenViewModel: NSObject, AgoraRtcEngineDelegate {
         
         // Use `View` and `PixelBuffer` as an `Player` outputs
         player.use(outputs: [view.localVideoView, outputPixelBuffer])
+        
+        player.play()
     }
     
     func viewDidLoad() {
