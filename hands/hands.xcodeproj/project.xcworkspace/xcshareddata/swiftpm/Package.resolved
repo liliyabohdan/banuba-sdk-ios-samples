@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBEffectPlayer.git",
       "state" : {
-        "revision" : "4a00b5f4c39f0a31a3f265061224add7e6e141f4",
-        "version" : "1.13.0"
+        "revision" : "4abc9c5795602a24ea33cbe66c2980d80a840ec5",
+        "version" : "1.17.0"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBHands.git",
       "state" : {
-        "revision" : "4741793f2b16a0d08170e3908c7e1ee884a3347c",
-        "version" : "1.13.0"
+        "revision" : "f2a95bdc309bf7a2bddb05cada9d2ec0886143ff",
+        "version" : "1.17.0"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBScripting.git",
       "state" : {
-        "revision" : "f3102369869d9e5c2837c08dbb6ac5c84d573f30",
-        "version" : "1.13.0"
+        "revision" : "0f057c839c3491682893bc8bb785c145b3f8925c",
+        "version" : "1.17.0"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkApi.git",
       "state" : {
-        "revision" : "329f182eb3d0269944b032936bd2d14c2c8b73c3",
-        "version" : "1.13.0"
+        "revision" : "7659a7aee61cc065359937781e13c8d89cf38c2d",
+        "version" : "1.17.0"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkCore.git",
       "state" : {
-        "revision" : "1b162bf1060bb38f8ad9ff306c2b5ad5dbbcd411",
-        "version" : "1.13.0"
+        "revision" : "811278aeee0536ee6930fa94e6df8c469db23248",
+        "version" : "1.17.0"
       }
     },
     {
@@ -50,10 +50,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBWatch.git",
       "state" : {
-        "revision" : "086f0abe1cecfd0ac5b2ff7f65a75da3b15da7ef",
-        "version" : "1.13.0"
+        "revision" : "064a8d2862dce184c32940c123fea3fb8f3dde0c",
+        "version" : "1.17.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

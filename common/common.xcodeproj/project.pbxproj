@@ -314,8 +314,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.13.0;
+				kind = exactVersion;
+				version = 1.17.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
