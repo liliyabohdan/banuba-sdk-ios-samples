@@ -94,6 +94,13 @@ bnb.eventListener.on("onUpdate", function (args) {
     }
 })
 
+bnb.eventListener.on("onActivate", function (args) {
+    setTimeout(()=>{
+        delTap()
+    }, 3000)
+})
+
+
 setState({
     "Face": {
         "shape": "shape_01",
@@ -204,10 +211,6 @@ function delTap(){
     bnb.scene.getRoot().findChildByName("plane").getComponent(bnb.ComponentType.MESH_INSTANCE).asMeshInstance().setVisible(false)
     am.findImage("tap").asVideo().asMedia().stop();
 }
-
-setTimeout(()=>{
-    delTap()
-}, 3000)
 
 
 //test("m01")

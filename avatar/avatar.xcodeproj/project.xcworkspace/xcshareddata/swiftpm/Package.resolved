@@ -12,7 +12,7 @@
     {
       "identity" : "bnbfacetracker",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sdk-banuba/BNBFaceTracker.git",
+      "location" : "https://github.com/sdk-banuba/BNBFaceTracker",
       "state" : {
         "revision" : "bdb2d30444748a86082c3f7a6358316b9a19ed1a",
         "version" : "1.17.0"
@@ -30,7 +30,7 @@
     {
       "identity" : "bnbsdkapi",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sdk-banuba/BNBSdkApi.git",
+      "location" : "https://github.com/sdk-banuba/BNBSdkApi",
       "state" : {
         "revision" : "7659a7aee61cc065359937781e13c8d89cf38c2d",
         "version" : "1.17.0"
@@ -46,5 +46,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
