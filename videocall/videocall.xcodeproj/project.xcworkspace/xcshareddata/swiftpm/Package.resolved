@@ -1,12 +1,22 @@
 {
+  "originHash" : "7848908adde926332ec5030b59643f6c6a34ed22712b3180accbf31dc4a37d0a",
   "pins" : [
+    {
+      "identity" : "agorainfra_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AgoraIO/AgoraInfra_iOS.git",
+      "state" : {
+        "revision" : "c2781d81a1ac78b94fefd53171975acb426b6ac5",
+        "version" : "1.2.13"
+      }
+    },
     {
       "identity" : "agorartcengine_ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AgoraIO/AgoraRtcEngine_iOS",
       "state" : {
-        "revision" : "091f97f803eda47273a85b60c6ae0facfad84ddf",
-        "version" : "4.3.2"
+        "revision" : "515a9f30c228665cd6cdadc46ae62c04de6ba5c2",
+        "version" : "4.5.2"
       }
     },
     {
@@ -14,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBBackground.git",
       "state" : {
-        "revision" : "8740ae1f6633b579e1a0c2cfdfaa007b80a0b23b",
-        "version" : "1.17.0"
+        "revision" : "b0217864c126f8d645077442a523a3024a38dee3",
+        "version" : "1.17.4"
       }
     },
     {
@@ -23,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBEffectPlayer.git",
       "state" : {
-        "revision" : "4abc9c5795602a24ea33cbe66c2980d80a840ec5",
-        "version" : "1.17.0"
+        "revision" : "4fc202304d112b649cbd0d713d6f3dfa27b2903d",
+        "version" : "1.17.4"
       }
     },
     {
@@ -32,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBFaceTracker.git",
       "state" : {
-        "revision" : "bdb2d30444748a86082c3f7a6358316b9a19ed1a",
-        "version" : "1.17.0"
+        "revision" : "58be651a6c6ae4cabd9ba817a724a9ed8a1a3a1d",
+        "version" : "1.17.4"
       }
     },
     {
@@ -41,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBLips.git",
       "state" : {
-        "revision" : "fea3d42380313e4fe99fa8be2d12390723acf5c0",
-        "version" : "1.17.0"
+        "revision" : "a9b24a3c3a2380dc36c70f5002cb0c57a0a8f59f",
+        "version" : "1.17.4"
       }
     },
     {
@@ -50,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBScripting.git",
       "state" : {
-        "revision" : "0f057c839c3491682893bc8bb785c145b3f8925c",
-        "version" : "1.17.0"
+        "revision" : "b61655e9de3d0f55ef8c082edb32f3e541c9afa2",
+        "version" : "1.17.4"
       }
     },
     {
@@ -59,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkApi.git",
       "state" : {
-        "revision" : "7659a7aee61cc065359937781e13c8d89cf38c2d",
-        "version" : "1.17.0"
+        "revision" : "3998c6083005a3404beb588004a679df70dc52b5",
+        "version" : "1.17.4"
       }
     },
     {
@@ -68,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkCore.git",
       "state" : {
-        "revision" : "811278aeee0536ee6930fa94e6df8c469db23248",
-        "version" : "1.17.0"
+        "revision" : "0d773e43bd0c47e0bec01b117ed193f21f8d2e26",
+        "version" : "1.17.4"
       }
     }
   ],

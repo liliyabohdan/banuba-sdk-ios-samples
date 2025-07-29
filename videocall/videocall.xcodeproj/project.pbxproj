@@ -545,7 +545,7 @@
 			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 4.3.2;
+				minimumVersion = 4.5.0;
 			};
 		};
 		13D24FC02BF632760016E5A6 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
@@ -553,7 +553,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
 				kind = exactVersion;
-				version = 1.17.0;
+				version = 1.17.4;
 			};
 		};
 		13D24FC32BF632830016E5A6 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */ = {
@@ -561,7 +561,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBFaceTracker";
 			requirement = {
 				kind = exactVersion;
-				version = 1.17.0;
+				version = 1.17.4;
 			};
 		};
 		13D24FC62BF6328D0016E5A6 /* XCRemoteSwiftPackageReference "BNBBackground" */ = {
@@ -569,7 +569,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBBackground";
 			requirement = {
 				kind = exactVersion;
-				version = 1.17.0;
+				version = 1.17.4;
 			};
 		};
 		13D24FC92BF6330B0016E5A6 /* XCRemoteSwiftPackageReference "BNBLips" */ = {
@@ -577,7 +577,7 @@
 			repositoryURL = "https://github.com/sdk-banuba/BNBLips";
 			requirement = {
 				kind = exactVersion;
-				version = 1.17.0;
+				version = 1.17.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
